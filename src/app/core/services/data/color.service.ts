@@ -18,12 +18,18 @@ export class ColorService {
 
   // Modify this pipeline to add the group, rValue, gValue, bValue and textColor
   // properties to each NamedColor object in the array
+
+  // Use the pickTextColorBasedOnBgColorAdvanced function to set the textColor.  
+  // You can pass 'white' and 'black' as the lightColor and darkColor parameters, respectively.
+
   colorsWithInfo$: Observable<NamedColor[]> = this.apiService.allNamedColors$.pipe(
     sortObs<NamedColor>('name'),
   )
 
   // Create and add the subjects/observables that filter the colors by:
   // group, rValue, gValue, bValue, hexValue, fuzzy search for text within name property, regular search for text within name property
+
+  // Use the fuzzy function to do a fuzzy search of the name property.
   filterBy$ = zip(
   )
 
