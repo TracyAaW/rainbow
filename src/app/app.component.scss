@@ -1,0 +1,132 @@
+:host {
+
+  .container {
+
+    display: grid;
+    grid-template-rows: 60px 1fr;
+  }
+
+  .toolbar {
+
+    display: flex;
+    align-items: center;
+    background-color: #14591D;
+    color: #d7f75b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .toolbar span {
+    margin: 0 16px;
+  }
+  
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+
+  .filter {
+    display: grid;
+    grid-template-rows: auto auto;
+
+    .controls {
+
+      padding: 1rem 0;
+
+      display: grid;
+      grid-template-columns: 1fr 200px;
+    }
+
+    .grayscale-container {
+      padding: 0 15px;
+      font-size: 1.25rem;
+
+      display: flex;
+      flex-direction: row;
+      align-items: end;
+      gap: 5px;
+
+      input {
+        margin-bottom: 8px;
+      }
+    }
+
+    .filter-container {
+      min-height: 100%;
+  
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+  
+      label {
+        font-size: 1.75rem;
+        color: gray;
+      }
+  
+      input {
+        border: gray 1px solid;
+        border-radius: 5px;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        padding: 5px;
+        width: 500px;
+      }
+    }
+
+    .legend {
+
+      padding: 1rem 2.25rem;
+
+      .legend-title {
+        font-size: 1.25rem;
+      }
+
+      .legend-container {
+
+        display: grid;
+        grid-template-rows: auto auto auto;
+
+        .legend-top,
+        .legend-middle {
+
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1rem;
+
+          .legend-group {
+
+            display: flex;
+            gap: 10px;
+          }
+        }
+
+        .legend-bottom {
+          margin-top: 15px;
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 10px;
+        }
+      }
+    }
+    
+  }
+
+
+  .content {
+    padding: 1rem;
+
+    .color-cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(325px, auto));
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
+}

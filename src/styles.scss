@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4e69;
+  text-align: left;
+  background-color: #f3f5fa; 
+
+  &.bkg-grayscale .main {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+}

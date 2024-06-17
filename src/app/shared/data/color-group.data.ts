@@ -1,0 +1,23 @@
+export enum ColorGroup {
+  All = '(All)',
+  Black = 'Black',
+  White = 'White',
+  Gray = 'Gray',
+  Red = 'Red',
+  RedOrange = 'Red-Orange',
+  OrangeBrown ='Orange-Brown',
+  OrangeYellow = 'Orange-Yellow',
+  Yellow = 'Yellow',
+  YellowGreen = 'Yellow-Green',
+  Green = 'Green',
+  GreenCyan = 'Green-Cyan',
+  Cyan = 'Cyan',
+  CyanBlue = 'Cyan-Blue',
+  Blue = 'Blue',
+  BlueMagenta = 'Blue-Magenta',
+  Magenta = 'Magenta',
+  MagentaPink = 'Magenta-Pink',
+  Pink = 'Pink',
+  PinkRed = 'Pink-Red',
+  Undefined = 'Undefined'
+}

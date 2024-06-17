@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="toolbar" role="banner">
+    <span>The RxJS Workshop&trade;</span>
+    <div class="spacer"><span>Rainbow</span></div>
+  </div>
+
+  <section>
+    <div class="filter">
+      <div class="controls">
+        <div class="filter-container">
+          <label for="filter">Filter</label>
+          <input type="text" name="filter" (keyup)="changeFilter($event)" >
+        </div>
+        <div class="grayscale-container">
+          <label for="grayscale">Grayscale</label>
+          <input type="checkbox" name="grayscale" [checked]="showGrayscaleSetting" (change)="changeGrayscale($event)">
+        </div>
+    
+      </div>
+      <div class="legend">
+        <div class="legend-title">Filter By (case insentive):</div>
+        <div class="legend-container">
+          <div class="legend-top">
+    
+            <div class="legend-group">
+              <span>R Value:</span>
+              <span>e.g. R255</span>
+            </div>
+            <div class="legend-group">
+              <span>G Value:</span>
+              <span>e.g. G255</span>
+            </div>
+            <div class="legend-group">
+              <span>B Value:</span>
+              <span>e.g. b255</span>
+            </div>
+    
+          </div>
+          <div class="legend-middle">
+            <div class="legend-group">
+              <span>Hex:</span>
+              <span>e.g. #3cb371</span>
+            </div>
+            <div class="legend-group">
+              <span>Text Within Name:</span>
+              <span>e.g. gray</span>
+            </div>
+            <div class="legend-group">
+              <span>Text Within Name (fuzzy):</span>
+              <span>e.g. ~gray</span>
+            </div>
+          </div>
+          <div class="legend-bottom">
+            <span>By Group:</span>
+            <span>
+              Black | White | Gray | Red | Red-Orange | Orange-Brown | Orange-Yellow | Yellow | Yellow-Green | Green | Green-Cyan | Cyan | Cyan-Blue | Blue | Magenta | Magenta-Pink | Pink | Pink-Red
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <main class="main">
+      <div class="content">
+        <div class="color-cards-container" *ngIf="filteredColors$ | async as colors" [@fadeAnimation]="colors">
+          <ng-container *ngFor="let color of colors">
+            <app-color-card [color]="color"></app-color-card>
+          </ng-container>
+        </div>
+      </div>
+    </main>
+  </section>
+</div>
+
+

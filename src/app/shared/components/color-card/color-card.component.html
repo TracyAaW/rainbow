@@ -1,0 +1,27 @@
+<div class="card-content">
+  <div class="card-swatch" [ngStyle]="{ 'background-color': color.hexValue }">
+    <div class="card-swatch-top">
+    </div>
+    <div class="color-hex" [ngStyle]="{ color: color.textColor }">
+      {{ color.hexValue | uppercase }}
+    </div>
+  </div>
+  <div class="color-info">
+    <div class="color-name">{{ color.name | titlecase }}</div>
+    <div class="color-group">{{ color.group }}</div>
+    <div class="color-rgb">
+      <div class="color-rgb-info">
+        <span>R:</span>
+        <span>{{ color.rValue }}</span>
+      </div>
+      <div class="color-rgb-info">
+        <span>G:</span>
+        <span>{{ color.gValue }}</span>
+      </div>
+      <div class="color-rgb-info">
+        <span>B:</span>
+        <span>{{ color.bValue }}</span>
+      </div>
+    </div>
+  </div>
+</div>
